@@ -1,0 +1,147 @@
+// Reboot
+//
+// This file is inspired from bootstrap _reboot.scss
+//
+// https://github.com/twbs/bootstrap/blob/main/scss/_reboot.scss
+//
+
+// Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Root
+//
+// Ability to the value of the root font sizes, affecting the value of `rem`.
+// null by default, thus nothing is generated.
+:root {
+  font-size: $font-size-root;
+}
+
+// Body
+//
+// 1. As a best practice, apply a default `background-color`.
+// 2. Prevent adjustments of font size after orientation changes in iOS.
+// 3. Change the default tap highlight to be completely transparent in iOS.
+body {
+  font-family: $font;
+  font-size: 1rem;
+  font-weight: $normal;
+  line-height: $line-height-base;
+  color: $body-color;
+  text-align: null;
+  background-color: $body-bg; // 1
+  -webkit-text-size-adjust: 100%; // 2
+  -webkit-tap-highlight-color: rgba($black, 0); // 3
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    // color: darken($link-color, 10%);
+    text-decoration: none;
+  }
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+// 1. Remove the margin in Firefox and Safari
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0; // 1
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Show the overflow in Edge
+button,
+input {
+  overflow: visible;
+}
+
+// Remove the inheritance of text transform in Firefox
+button,
+select {
+  text-transform: none;
+}
+
+// Remove outline in Chrome
+input,
+textarea,
+select,
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+// Set the cursor for non-`<button>` buttons
+//
+// Details at https://github.com/twbs/bootstrap/pull/30562
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+// Remove the inheritance of word-wrap in Safari.
+// See https://github.com/twbs/bootstrap/issues/24990
+
+select {
+  word-wrap: normal;
+}
+
+// Remove the dropdown arrow in Chrome from inputs built with datalists.
+// See https://stackoverflow.com/a/54997118
+[list]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+// Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+// 1. Textareas should really only resize vertically so they don't break their (horizontal) containers.
+textarea {
+  resize: vertical; // 1
+}
+
+// 1. Correct the outline style in Safari.
+// 2. This overrides the extra rounded corners on search inputs in iOS so that our
+//    `.form-control` class can properly style them. Note that this cannot simply
+//    be added to `.form-control` as it's not specific enough. For details, see
+//    https://github.com/twbs/bootstrap/issues/11586.
+[type="search"] {
+  outline-offset: -2px; // 1
+  -webkit-appearance: textfield; // 2
+}
+
+// Remove the inner padding in Chrome and Safari on macOS.
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+// How to Remove “X” icon from search input field or input type search
+// https://stackoverflow.com/questions/9421551/how-do-i-remove-all-default-webkit-search-field-styling/9422689
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+iframe {
+  vertical-align: middle;
+}

@@ -1,0 +1,30 @@
+@import "assets/base";
+
+.button {
+  $sz: 3rem;
+  position: relative;
+  border-radius: 50%;
+  margin: 0 1%;
+  height: $sz;
+  width: $sz;
+  text-align: center;
+  font-size: 1.5rem;
+  border: 2px solid;
+  background: transparent;
+  margin-left: 0.5rem;
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    color: $primary;
+  }
+
+  &.active:hover {
+    color: firebrick;
+  }
+}

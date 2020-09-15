@@ -1,0 +1,51 @@
+@import "assets/base";
+
+.value {
+  padding: 0.7rem 0.9rem;
+  display: inline-block;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  background: rgba($black, 0.3);
+  transition: border-color 0.1s;
+
+  &:hover {
+    border-color: rgba($primary, 0.8);
+  }
+
+  .label {
+    position: relative;
+    display: block;
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: $medium;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      height: 2px;
+      background: $white;
+      margin-top: 4px;
+    }
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      margin-right: 5px;
+      color: $secondary;
+      line-height: 0;
+    }
+
+    .number {
+      font-size: 1.1rem;
+      font-weight: $medium;
+    }
+  }
+}

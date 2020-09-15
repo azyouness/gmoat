@@ -1,0 +1,89 @@
+@import "assets/base";
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .link {
+    z-index: 1;
+    position: relative;
+    display: block;
+    padding: 2rem 1.5rem;
+    color: $text-primary;
+    font-size: 1.1rem;
+    font-weight: $medium;
+    text-transform: uppercase;
+    transition: background 0.15s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: $primary;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 0.3;
+      }
+    }
+
+    &.active {
+      background: linear-gradient(to bottom, $gray-200, transparent);
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1080px) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: block;
+    width: 100%;
+    background-color: $gray-900;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    box-shadow: 0 4px 6px -2px rgba($black, 0.5);
+    transition: opacity 0.2s, max-height 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+
+    &.open {
+      opacity: 1;
+      max-height: 350px;
+    }
+
+    .link {
+      display: block;
+      padding: 1.3rem 1rem;
+      color: $gray-200;
+      border-bottom: 1px solid $gray-800;
+      transition: color 0.15s;
+
+      &:before {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 4px;
+      }
+
+      &:hover {
+        color: $gray-400;
+      }
+
+      &.active {
+        color: $primary;
+        background: lighten($gray-900, 2%);
+      }
+    }
+  }
+}

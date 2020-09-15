@@ -1,0 +1,61 @@
+@import "./assets/base";
+
+.header {
+  // border: 1px solid;
+  margin-bottom: 1.3rem;
+
+  .title {
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: $medium;
+
+    .year {
+      color: $gray-500;
+    }
+  }
+
+  .details {
+    margin-left: 0.3rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    li {
+      padding-right: 0.8rem;
+      margin-right: 0.8rem;
+      border-right: 2px solid $gray-300;
+
+      &:last-child {
+        padding-right: 0;
+        margin-right: 0;
+        border-right: none;
+      }
+
+      &.genres {
+        white-space: normal;
+        span {
+          &:not(:last-child)::after {
+            content: ",";
+            display: inline-block;
+            margin-left: 2px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .title {
+      // text-align: center;
+    }
+
+    .details {
+      // justify-content: center;
+      align-items: flex-start;
+      font-size: 0.9rem;
+    }
+  }
+}

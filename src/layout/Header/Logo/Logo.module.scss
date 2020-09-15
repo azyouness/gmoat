@@ -1,0 +1,38 @@
+@import "assets/base";
+
+.logo {
+  text-align: left;
+  transition: opacity 0.2s;
+
+  a {
+    display: inline-block;
+    padding: 1rem;
+    color: $text-primary;
+    text-align: center;
+    line-height: 1.3;
+
+    .legend,
+    .caption {
+      span {
+        color: $primary;
+      }
+    }
+
+    .legend {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      font-weight: $bold;
+    }
+
+    .caption {
+      font-size: 0.9rem;
+      font-weight: $medium;
+      text-transform: capitalize;
+      // white-space: nowrap;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

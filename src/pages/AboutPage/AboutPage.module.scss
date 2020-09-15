@@ -1,0 +1,48 @@
+@import "./assets/base";
+
+.page {
+  color: $white;
+  background: linear-gradient(to bottom, $gray-800, $gray-900);
+
+  .container {
+    width: 95%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 3rem 0;
+
+    .equation {
+      margin-top: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 2rem;
+      font-size: 1.1rem;
+      font-weight: $medium;
+      border-radius: 0.3rem;
+      background-color: rgba($gray-700, 0.2);
+
+      .equalIcon {
+        font-size: 1.5rem;
+        margin: 0 1rem;
+        color: $gray-600;
+        font-weight: $normal;
+      }
+
+      .number {
+        color: $primary;
+      }
+
+      .result {
+        color: $secondary;
+        display: inline-block;
+        $sz: 36px;
+        width: $sz;
+        height: $sz;
+        line-height: $sz - 5;
+        font-size: 1.2rem;
+        text-align: center;
+        border: 3px solid;
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "./assets/base";
+
+.movie {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .col:first-child {
+    flex: 0 0 33%;
+    margin-right: 2rem;
+  }
+
+  .col:last-child {
+    flex-grow: 1;
+  }
+
+  @media only screen and (max-width: 960px) {
+    display: block;
+
+    .col {
+      display: block;
+      flex: none !important;
+      margin: 0 !important;
+
+      &:first-child {
+        margin-bottom: 2rem !important;
+      }
+    }
+  }
+}

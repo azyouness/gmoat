@@ -1,0 +1,58 @@
+@import "assets/base";
+
+.header {
+  position: relative;
+  background: $white;
+  box-shadow: 0 4px 6px -2px rgba($black, 0.2);
+
+  .container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > div {
+      // border: 1px solid;
+      text-align: center;
+    }
+
+    .logo,
+    .buttons {
+      min-width: 20%;
+    }
+
+    .nav {
+      flex-grow: 1;
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .navButton {
+        display: none;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1080px) {
+    .container {
+      .logo {
+        flex-grow: 1;
+      }
+
+      .nav {
+        z-index: 1; // ensure nav is above settingsbox
+        flex-grow: 0;
+      }
+
+      .buttons {
+        .navButton {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

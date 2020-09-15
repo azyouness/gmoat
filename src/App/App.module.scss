@@ -1,0 +1,31 @@
+@import "./assets/base";
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: $app-max-width;
+  min-height: 100vh;
+  margin: 0 auto;
+  box-shadow: 0 0 2rem rgba($black, 0.2);
+
+  .header,
+  .main,
+  .footer {
+    &.hide {
+      display: none !important;
+    }
+  }
+
+  .header {
+    z-index: $top-zindex;
+    position: sticky;
+    top: 0;
+  }
+
+  .main {
+    position: relative;
+    flex-grow: 1;
+  }
+}

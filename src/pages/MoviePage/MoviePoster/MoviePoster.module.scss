@@ -1,0 +1,17 @@
+@import "./assets/base";
+
+.poster {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+  }
+
+  figcaption {
+    // margin-top: .5rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: $medium;
+  }
+}

@@ -1,0 +1,10 @@
+@import "./assets/base";
+
+.overview {
+  font-size: 1.1rem;
+  line-height: 1.5;
+
+  @media only screen and (max-width: 600px) {
+    // text-align: justify;
+  }
+}

@@ -1,0 +1,45 @@
+@import "assets/base";
+
+.footer {
+  color: $white;
+  background: $gray-900;
+
+  .container {
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem;
+
+    .copy {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: $normal;
+      text-align: left;
+
+      span {
+        color: $primary;
+      }
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      text-align: right;
+
+      a {
+        font-size: 2.4rem;
+        line-height: 0;
+        color: $white;
+        transition: color 0.15s;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

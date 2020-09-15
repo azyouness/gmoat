@@ -1,0 +1,26 @@
+@import "assets/base";
+
+.button {
+  display: block;
+  width: 100%;
+  border: none;
+  text-align: center;
+  padding: 4rem 2rem;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  font-weight: $medium;
+  background-color: transparent;
+  color: $gray-400;
+  background: $gray-900;
+  border-bottom: 4px solid $primary;
+  transition: color 0.15s, background 0.15s;
+
+  &:hover {
+    color: $gray-200;
+    background-color: $gray-800;
+
+    .icon {
+      color: $primary;
+    }
+  }
+}

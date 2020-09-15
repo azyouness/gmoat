@@ -1,0 +1,44 @@
+@import "./assets/base";
+
+.crew {
+  dl {
+    // border: 1px solid;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4rem;
+    font-size: 1.1rem;
+
+    @media only screen and (max-width: 768px) {
+      align-items: flex-start;
+    }
+
+    dt {
+      min-width: 4rem;
+      margin-right: 0.6rem;
+      font-weight: $medium;
+
+      &::after {
+        content: ":";
+      }
+    }
+
+    dd {
+      flex-grow: 1;
+    }
+
+    &.writers {
+      dd {
+        span {
+          &:not(:last-of-type)::after {
+            content: ", ";
+            margin-right: 8px;
+          }
+
+          i {
+            font-weight: $light;
+          }
+        }
+      }
+    }
+  }
+}

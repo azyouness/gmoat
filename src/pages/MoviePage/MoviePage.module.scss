@@ -1,0 +1,41 @@
+@import "./assets/base";
+
+.page {
+  .container {
+    position: relative;
+    padding: 3rem 0;
+    margin: 0 auto;
+    max-width: 90%;
+
+    .goBack {
+      position: absolute;
+      top: 0;
+      right: 0;
+      line-height: 0;
+      font-size: 2.4rem;
+      padding: 1rem;
+      border: none;
+      color: $text-secondary;
+      background-color: transparent;
+      transition: color 0.2s, transform 0.2s;
+
+      &:hover {
+        color: $primary;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .container {
+      max-width: 95%;
+
+      .goBack {
+        top: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 0.5rem rgba($black, 0.06);
+        background-color: rgba($body-bg, 0.8);
+      }
+    }
+  }
+}
